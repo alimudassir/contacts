@@ -2,7 +2,7 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #dc3545;
+  --primary-color: #2e48db;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -228,7 +228,7 @@ img {
 
 .badge {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   padding: 0.2rem 0.7rem;
   text-align: center;
   margin: 0.3rem;

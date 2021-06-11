@@ -53,7 +53,7 @@ const ContactState = props => {
 
   return (
     <ContactContext.Provider
-      values = {{
+      value = {{
         contacts : state.contacts
       }}>
       { props.children }
