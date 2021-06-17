@@ -4,13 +4,21 @@ import ContactContext from "../../context/contact/contactContext";
 
 const Contacts = () => {
   const contactContext = useContext(ContactContext);
-  const contacts = contactContext.contacts;
+  const { contacts, filtered } = contactContext;
+
+  if (contacts.length === 0) {
+    return <h4>Please add a Contact</h4>;
+  }
 
   return (
     <Fragment>
-      {contacts.map((currentContact) => (
-        <ContactItem key={currentContact.id} contact={currentContact} />
-      ))}
+      {filtered !== null
+        ? filtered.map((currentContact) => (
+            <ContactItem key={currentContact.id} contact={currentContact} />
+          ))
+        : contacts.map((currentContact) => (
+            <ContactItem key={currentContact.id} contact={currentContact} />
+          ))}
     </Fragment>
   );
 };
