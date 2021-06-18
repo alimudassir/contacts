@@ -26,15 +26,6 @@ const ContactForm = () => {
     type: "Personal",
   });
 
-  if (!contact) {
-    contact = {
-      name: "",
-      email: "",
-      phone: "",
-      type: "Personal",
-    };
-  }
-
   const { name, email, phone, type } = contact;
 
   const onChange = (e) =>
